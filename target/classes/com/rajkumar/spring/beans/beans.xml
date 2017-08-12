@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+
+
+	<bean id="person" class="com.rajkumar.spring.Person"
+		scope="singleton" init-method="onInit" destroy-method="onDestroy"
+		factory-method="getInstance">
+		<constructor-arg value="12345" name="id" type="int"
+			index="0">
+		</constructor-arg>
+		<constructor-arg value="Rajkumar" name="name" type="String"
+			index="1">
+		</constructor-arg>
+		<property name="taxId" value="321"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+	
+	<bean id="person2" class="com.rajkumar.spring.Person"
+		scope="singleton" init-method="onInit" destroy-method="onDestroy"
+		factory-method="createPerson" factory-bean="personfactory">
+		<constructor-arg value="8888" name="id" type="int"
+			index="0">
+		</constructor-arg>
+		<constructor-arg value="Anu" name="name" type="String"
+			index="1">
+		</constructor-arg>
+		<property name="taxId" value="666"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+
+
+
+	<bean id="address" class="com.rajkumar.spring.Address">
+		<constructor-arg name="street" value="46 New Street"></constructor-arg>
+		<constructor-arg name="postalCode" value="614205"></constructor-arg>
+	</bean>
+	<bean id="personfactory"
+		class="com.rajkumar.spring.PersonFactory">
+	</bean>
+</beans>
