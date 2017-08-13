@@ -12,6 +12,20 @@ public class Address {
 	}
 	
 	/**
+	 * @param street the street to set
+	 */
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	/**
+	 * @param postalCode the postalCode to set
+	 */
+	public void setPostalCode(int postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	/**
 	 * @param street
 	 * @param postalCode
 	 */
