@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="jungle" class="com.rajkumar.spring.Jungle">
+		<property name="largest" ref="elephant"></property>
+		<property name="animals">
+			<list>
+				<ref bean="snake" />
+				<ref bean="lion" />
+				<ref bean="elephant" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="lion" class="com.rajkumar.spring.Animal">
+		<property name="name" value="bob"></property>
+		<property name="type" value="lion"></property>
+	</bean>
+	<bean id="elephant" class="com.rajkumar.spring.Animal">
+		<property name="name" value="howard"></property>
+		<property name="type" value="elephant"></property>
+	</bean>
+	<bean id="snake" class="com.rajkumar.spring.Animal">
+		<property name="name" value="ed"></property>
+		<property name="type" value="snake"></property>
+	</bean>
+</beans>
