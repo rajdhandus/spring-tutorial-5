@@ -31,7 +31,7 @@
 				<prop key="gorilla">banana</prop>
 				<prop key="panda">bamboo</prop>
 				<prop key="snake">milk</prop>
-				<prop key="rabbit">carrot</prop>
+				<!-- <prop key="rabbit">carrot</prop>-->
 			</props>
 		</property>
 	</bean>
