@@ -9,6 +9,7 @@ public class Jungle {
 	private Animal largest;
 	private List<Animal> animals;
 	private Map<String, String> foodsForAnimals = new HashMap<String, String>();
+	private Map<String, Animal> collectionOfAnimals = new HashMap<String, Animal>();
 
 	
 	
@@ -18,6 +19,17 @@ public class Jungle {
 	public void setFoodsForAnimals(Map<String, String> foodsForAnimals) {
 		this.foodsForAnimals = foodsForAnimals;
 	}
+	
+	
+
+	/**
+	 * @param collectionOfanimals the collectionOfanimals to set
+	 */
+	public void setCollectionOfAnimals(Map<String, Animal> collectionOfAnimals) {
+		this.collectionOfAnimals = collectionOfAnimals;
+	}
+
+
 
 	/**
 	 * @return the largest
@@ -47,16 +59,20 @@ public class Jungle {
 		this.animals = animals;
 	}
 
+
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Jungle [largest=" + largest + ", animals=" + animals + ", foodsForAnimals=" + foodsForAnimals + "]";
+		return "Jungle [largest=" + largest + ", animals=" + animals + ", foodsForAnimals=" + foodsForAnimals
+				+ ", collectionOfAnimals=" + collectionOfAnimals + "]";
 	}
 
+
+
 	
-	
-	
+
 
 }

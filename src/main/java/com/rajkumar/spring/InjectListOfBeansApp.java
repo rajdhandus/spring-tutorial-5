@@ -8,7 +8,8 @@ public class InjectListOfBeansApp {
 	public static void main(String[] args) {
 //		ApplicationContext context = new ClassPathXmlApplicationContext("com/rajkumar/spring/beans/listOfBeans.xml");
 //		ApplicationContext context = new ClassPathXmlApplicationContext("com/rajkumar/spring/beans/InnerBeans.xml");
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/rajkumar/spring/beans/PropertyMaps.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("com/rajkumar/spring/beans/PropertyMaps.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/rajkumar/spring/beans/PropertyMaps2.xml");
 		Jungle jungle = (Jungle)context.getBean("jungle");
 		System.out.println(jungle);
 		((ClassPathXmlApplicationContext)context).close();
